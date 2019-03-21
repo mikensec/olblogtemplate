@@ -1,0 +1,32 @@
+<div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      <img id="cover-photo" src="/images/{{ page.cover }}">
+    </div>
+    <div id="info-container">
+      <h1 id="title">{{ page.title }}</h1>
+    </div>
+  </div>
+       <div class="posts">
+          <ul class="posts-homelist">
+            {% for post in site.posts %}
+              <li class="post-link">
+                <a class="post-title" href="{{ post.url }}">
+                  <span class="post-date">{{ post.date | date_to_string }}</span>
+                  {{ post.title }}
+		</a> 
+		 <div class="post-homepreview">{{ post.content | strip_html | truncatewords: 20 }}</div>
+	      </li>
+            {% endfor %}
+          </ul>
+        </div>
+  <div class="colophon">
+    <p>
+      <span class="separator">&bull;</span>
+      <span id="social">Find me on <a href="">Twitter</a>!</span>
+    </p>
+  </div>
+</div>

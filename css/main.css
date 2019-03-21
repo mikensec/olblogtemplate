@@ -69,6 +69,18 @@ a:hover {
   line-height: 1.75em;
 }
 
+.posts-homelist {
+  list-style-type: none;
+}
+
+.posts-homelist li {
+  text-align: left;
+  line-height: 1.75em;
+}
+
+
+
+
 /*****************************************************************************/
 /*
 /* Site
@@ -126,6 +138,12 @@ a:hover {
   text-transform: uppercase;
   font-weight: 600;
   color: #787878;
+}
+
+#homepreview {
+ line-height: 24px;
+ max-width: 725px;
+ clear: both;
 }
 
 #cover-photo-container,
